@@ -1,12 +1,14 @@
 apply plugin: 'com.android.application'
 
-dependencies {
-    compile project(':library')
-}
-
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        versionCode 2
+        versionName "2.0.0-masf"
+    }
 
     sourceSets {
         main {
@@ -20,7 +22,7 @@ android {
         }
 
         // Move the tests to tests/java, tests/res, etc...
-        instrumentTest.setRoot('tests')
+        //instrumentTest.setRoot('tests')
 
         // Move the build types to build-types/<type>
         // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
@@ -31,4 +33,10 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+}
+
+dependencies {
+    implementation project(':library')
+    implementation "androidx.fragment:fragment:1.1.0-rc02"
+    implementation 'androidx.cursoradapter:cursoradapter:1.0.0'
 }

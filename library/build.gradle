@@ -1,12 +1,14 @@
 apply plugin: 'com.android.library'
 
-dependencies {
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-}
-
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        versionCode 2
+        versionName "2.0.0-masf"
+    }
 
     lintOptions {
         tasks.lint.enabled = false
@@ -36,3 +38,9 @@ android {
         release.setRoot('build-types/release')
     }
 }
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cursoradapter:cursoradapter:1.0.0'
+}
+
