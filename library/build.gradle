@@ -1,9 +1,9 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 35
-    buildToolsVersion = "35.0.0"
-    namespace "com.mobeta.android.dslv"
+    compileSdk = 35
+    buildToolsVersion = "35.0.1"
+    namespace = "com.mobeta.android.dslv"
 
     defaultConfig {
         minSdkVersion 14
