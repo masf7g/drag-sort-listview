@@ -1,11 +1,17 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 36
+    buildToolsVersion "36.1.0"
+    namespace = "com.mobeta.android.dslv"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 21
         versionCode 2
         versionName "2.0.0-masf"
     }
@@ -36,6 +42,10 @@ android {
         // by a similar customization.
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
+    }
+    buildFeatures {
+        renderScript = true
+        aidl = true
     }
 }
 
