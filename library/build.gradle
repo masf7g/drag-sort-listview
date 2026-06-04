@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk = 36
+    compileSdk = 37
     buildToolsVersion = '36.1.0'
     namespace = "com.mobeta.android.dslv"
 
